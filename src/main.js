@@ -1,4 +1,3 @@
-// resources/js/app.js
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router'
 
