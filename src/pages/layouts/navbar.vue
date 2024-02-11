@@ -7,7 +7,7 @@
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </div>
                 <div class="top">
-                    <div class="theme-toggler dropdown1" id="">
+                    <div class="theme-toggler dropdown1">
                         <i class="fa fa-bell dropbtn1" aria-hidden="true"></i>
                         <div class="notification-indicator"></div>
                         <div class="dropdown-content1">

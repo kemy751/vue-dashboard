@@ -143,6 +143,8 @@ small {
     color: var(--color-light);
 }
 
+
+/* tables */
 section table {
     width: 100%;
     border-radius: var(--card-border-radius);
@@ -211,20 +213,27 @@ section table tr .action i {
         right: 10px;
         font-size: 1.5rem;
         cursor: pointer;
-        margin-top:0.5rem;
+        margin-top: 0.5rem;
     }
- .overlay aside h3{
-    font-size:0.7rem;
- }
-.overlay aside .sidebar .links {
-    gap: 0.5rem;
-    height: 2.7rem;
-    
-}
 
-aside .sidebar .links i {
-    font-size: 0.6rem;
-}
+    .overlay aside h3 {
+        font-size: 0.7rem;
+    }
+
+    .overlay aside .sidebar .links {
+        gap: 0.5rem;
+        height: 2.7rem;
+
+    }
+
+    .overlay aside .sidebar .links i {
+        font-size: 0.6rem;
+    }
+
+    .overlay small {
+        font-size: 0.5rem;
+    }
+
     .navbar .nav .top .menu {
         display: inline-block;
     }
@@ -244,7 +253,7 @@ aside .sidebar .links i {
         grid-template-columns: 1fr;
         gap: 0;
     }
-  
+
 }
 
 /* ----MOBILE------- */
@@ -263,15 +272,17 @@ aside .sidebar .links i {
     aside {
         display: none;
     }
-    aside .top h1{
-       font-size: 1rem;
+
+    aside .top h1 {
+        font-size: 1rem;
     }
 
     .overlay aside .top .close {
         font-size: 1rem;
-        right:1rem;
-     
+        right: 1rem;
+
     }
+
     .overlay {
         position: fixed;
         top: 0;
@@ -284,7 +295,6 @@ aside .sidebar .links i {
 
     .overlay aside {
         display: inline-block;
-        /* margin-left: 2rem; */
     }
 
     main .navbar {
@@ -300,9 +310,12 @@ aside .sidebar .links i {
         z-index: 2;
         box-shadow: 0 1rem 1rem var(--color-light);
     }
+    main .navbar .nav .top{
+        width:270px;
+    }
 
     .navbar .nav .search {
-        display: none;
+        display: none;    
     }
 
     .navbar .nav {
@@ -315,6 +328,10 @@ aside .sidebar .links i {
     main .navbar .line {
         display: none;
     }
+
+    .dropdown-content1 {
+    left: 5px;
+}
 
     section {
         margin-top: 5rem;

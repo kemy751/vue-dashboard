@@ -1,6 +1,5 @@
 <template>
     <slot>
-
         <div class="sidebar">
             <aside>
                 <div class="top">
@@ -117,8 +116,6 @@ aside .sidebar .links i {
     font-size: 1.2rem;
     transition: all 300ms ease;
 }
-
-
 
 aside .sidebar .links.active h3 {
     color: var(--color-danger);

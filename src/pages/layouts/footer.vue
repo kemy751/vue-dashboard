@@ -1,6 +1,5 @@
 <template>
     <slot>
-        <div class="line"></div>
         <footer>
             <p>Dashboard</p>
             <p><i class="fa fa-copyright" aria-hidden="true"></i>Copyright @ 2024</p>
@@ -8,9 +7,9 @@
     </slot>
 </template>
 <style scoped>
-footer{
-    display:flex;
+footer {
+    display: flex;
     justify-content: space-between;
-    padding:1rem;
+    padding: 1rem;
 }
 </style>
