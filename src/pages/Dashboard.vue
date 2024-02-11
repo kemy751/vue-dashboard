@@ -107,9 +107,6 @@
                     </div>
                 </div>
 
-
-
-                <!-- -------------------end---- -->
                 <div class="section2">
                     <div class="recent-activity">
                         <div class="top">
