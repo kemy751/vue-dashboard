@@ -25,7 +25,7 @@
 </template>
 <style scoped>
 h2{
-    margin-top:2rem;
+    margin-top:3rem;
     color:rgba(1, 1, 52, 0.922);
 }
 form{
@@ -55,5 +55,11 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+/* Media queries */
+@media screen and (max-width:1200px) {
+    form{
+    grid-template-columns: 1fr;
+}
 }
 </style>

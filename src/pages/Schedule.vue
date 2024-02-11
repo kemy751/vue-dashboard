@@ -80,6 +80,7 @@
 .main {
     display: grid;
     grid-template-columns: 2fr 2fr;
+    margin-top: 3rem;
     gap: 1rem;
 }
 
@@ -89,19 +90,26 @@
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
     border: 1px solid rgb(239, 233, 233);
+    height: 80vh;
+    overflow: auto;
 }
-.main .announcements h2{
-    text-align:center;
+
+.main .announcements h2 {
+    text-align: center;
 }
-.main .announcements p{
-    margin:1rem;
+
+.main .announcements p {
+    margin: 1rem;
 }
+
 .main .schedule {
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
     border: 1px solid rgb(239, 233, 233);
+    height: 80vh;
+    overflow: auto;
 }
 
 .main .schedule h2 {
@@ -120,4 +128,15 @@
     gap: 1rem;
 
 }
-</style>
+
+/* Media queries */
+@media screen and (max-width:1200px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .main .schedule .sch {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}</style>

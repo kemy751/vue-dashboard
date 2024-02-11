@@ -7,14 +7,16 @@
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </div>
                 <div class="top">
-                    <button>
-                        <i class="fa fa-bars" aria-hidden="true"></i></button>
-                    <div class="theme-toggler dropdown1">
+                    <div class="theme-toggler dropdown1" id="">
                         <i class="fa fa-bell dropbtn1" aria-hidden="true"></i>
                         <div class="notification-indicator"></div>
                         <div class="dropdown-content1">
-                            <a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Application error</a>
-                            <a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>New employee registered</a>
+                            <a href="#">
+                                <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> Application error
+                            </a>
+                            <a href="#">
+                                <span class="fa fa-user-plus" aria-hidden="true"></span>New employee registered
+                            </a>
                         </div>
                         <i class="fa fa-commenting" aria-hidden="true"></i>
                     </div>
@@ -34,12 +36,36 @@
                             </div>
                         </div>
                     </div>
+                    <div class="menu">
+                        <mobile-menu :isMenuOpen="isMenuOpen" @toggleMenu="toggleMenu" @closeMenu="closeMenu" />
+                    </div>
                 </div>
             </div>
             <div class="line"></div>
         </div>
     </slot>
 </template>
+<script>
+import MobileMenu from './MobileMenu.vue';
+export default {
+    components: {
+        MobileMenu,
+    },
+    data() {
+    return {
+      isMenuOpen: false, 
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen; 
+    },
+    closeMenu() {
+      this.isMenuOpen = false;
+    },
+  },
+};
+</script>
 <style scoped>
 .navbar>div {
     display: grid;
@@ -60,7 +86,7 @@
     border: 1px solid rgb(189, 187, 187);
     width: 16rem;
     background-color: rgba(244, 243, 243, 0.781);
-    padding-right: 2rem;
+
 }
 
 .navbar .nav .search i {
@@ -72,7 +98,7 @@
     transform: translateY(-50%);
 }
 
-.navbar .nav button {
+.navbar .nav .menu {
     display: none;
 }
 
@@ -101,13 +127,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 0.8rem;
-
+    margin-top: 3rem;
 }
 
 .navbar .nav .top .theme-toggler .notification-indicator {
     position: absolute;
-    top: 1;
+    top: 1.5rem;
     right: 42px;
     background-color: red;
     color: white;
@@ -127,18 +152,12 @@
     margin-top: 1rem;
 }
 
+.navbar .nav .top .profile img{
+    width:100%;
+    height:100%;
+}
 .navbar .nav .profile .info p {
-    margin-top: 0.5rem;
-}
-
-.navbar .nav .profile .dropdown {
-    margin-top: 0.7rem;
-}
-
-.navbar .line {
-    border: 1px solid rgba(231, 229, 229, 0.783);
-    width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 0.9rem;
 }
 
 .top .dropdown1 {
@@ -153,24 +172,26 @@
     min-width: 220px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: 35px;
+    top: 3rem;
     right: 0;
 }
 
 .dropdown-content1 a {
-    color: red;
-    /* padding: 10px 16px; */
     text-decoration: none;
     display: flex;
-    justify-content:space-around;
-    text-align: left;
-
+    justify-content: space-around;
+    color: red;
+    padding: 10px 16px;
+    height: 40px;
 }
 
-.dropdown-content1 a i {
-    /* margin-right: 0.3rem; */
-    font-size: 0.1rem;
-    color: red;
+.top .dropdown1 .dropdown-content1 a span {
+    height: 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    font-size: 1rem;
 }
 
 .dropdown-content1 a:hover {
@@ -219,4 +240,5 @@
 
 .dropdown2:hover .dropdown-content2 {
     display: block;
-}</style>
+}
+</style>

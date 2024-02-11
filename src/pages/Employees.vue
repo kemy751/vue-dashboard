@@ -1,10 +1,7 @@
 <template>
     <section>
         <h2>Employees Table</h2>
-        <!-- <div class=""> -->
-            <div class="button">
-                <button>Add New Employees</button>
-            </div>
+        <div>
         <table>
             <tr>
                 <th>Employee Id</th>
@@ -83,7 +80,7 @@
                 </td>
             </tr>
         </table>
-        <!-- </div> -->
+    </div>
     </section>
 </template>
 <style scoped>
@@ -95,31 +92,6 @@ section {
 section h2 {
     margin-top: 1rem;
 }
-
-section .button button{
-padding:1rem;
-border-radius:10px;
-background:rgba(1, 1, 52, 0.922);
-color:white;
-}
-
-section table {
-    width: 100%;
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
-    border: 0.07rem solid rgba(88, 88, 88, 0.532);
-    color: black;
-}
-
-section table tr th {
-    text-align: center;
-}
-
-section table tr td {
-    text-align: center;
-    border: none;
-}
-
 section table tr .suspend span {
     padding: 0.3rem;
     color: red;
@@ -137,5 +109,13 @@ section table tr .action i{
     font-size: 1rem;
     margin-left:0.5rem;
     color:red;
+}
+
+/* Media queries */
+@media screen and (max-width:1200px) {
+    section div  {
+overflow-x:auto;
+width:100%;
+}
 }
 </style>
